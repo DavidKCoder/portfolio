@@ -15,6 +15,10 @@ const MessageInfo = ({ type }) => {
     toaster.push(message, { placement: 'bottomCenter', duration: 5000 })
   }, [ type ])
 
+  return (
+    { message }
+  )
+
 }
 
 export default MessageInfo;
