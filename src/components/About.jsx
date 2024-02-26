@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Button, Nav, Navbar, Stack, Grid, Row, Col } from 'rsuite';
-import SocialMedia from "./SocialMedia";
+import { Button, Stack, Grid, Row, Col } from 'rsuite';
 import { calculateAge } from "../myAge";
 
 const About = () => {
@@ -25,7 +24,6 @@ const About = () => {
   const infoData = [
     { title: 'Name', value: 'David Karapetyan' },
     { title: 'Age', value: `${ageString}` },
-    { title: 'Phone', value: '+374(55) 753272' },
     { title: 'Email', value: 'karapetyand91@gmail.com' },
     { title: 'Address', value: 'Armenia, Yerevan' },
   ]
@@ -41,7 +39,7 @@ const About = () => {
                 <span className="tag">{`<p>`}</span>
                 <p>Hello!</p>
                 My name is David and I specialize in web development that utilizes HTML, CSS, JS, and <span
-                className="tag">REACT</span> etc.
+                className="tag">React Js</span> etc.
                 I am a highly motivated individual and eternal optimist dedicated to writing clear, concise, robust code
                 that
                 works. Striving to never stop learning and improving.
@@ -50,6 +48,32 @@ const About = () => {
                 photography.
                 I like to have my perspective and belief systems challenged so that I see the world through new eyes.
                 <span className="tag">{`<p>`}</span>
+              </div>
+            </div>
+          </Col>
+        </Row>
+      </Grid>
+      <Grid fluid className="about-section">
+        <Row gutter={10}>
+          <Col xs={24} sm={24} md={12}>
+            <div className="about-left-content">
+              <div className="about-text">
+                <p>Experience!</p>
+                Full Stack Developer
+                We Construct
+                Sep. 2020 - Jen 2024
+                <br/>
+                <br/>
+                <p>Education!</p>
+                National Polytechnic University of Armenia
+                Bachelor’s degree
+                Automation and management
+                <br/>
+                <br/>
+                <p>Language</p>
+                <h4>English: Intermediate (B1)</h4>
+                <h4>Russian: Advanced (C1)</h4>
+                <h4>Armenian: Native</h4>
               </div>
             </div>
           </Col>
@@ -64,11 +88,6 @@ const About = () => {
                   </div>
                 )
               })}
-              <Navbar appearance="subtle">
-                <Nav>
-                  <SocialMedia/>
-                </Nav>
-              </Navbar>
             </div>
           </Col>
         </Row>

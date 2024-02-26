@@ -52,6 +52,12 @@ export const skills = [
     info: 'Node.js is a server-side JavaScript runtime environment that enables the execution of JavaScript code outside the browser. With Node.js, I can build scalable and high-performance server-side applications, APIs, and microservices. I\'m proficient in using Node.js with frameworks like Express.js for routing, middleware, and handling HTTP requests, as well as working with databases like MongoDB and MySQL.',
     img: nodeJS
   },
+  {
+    name: 'React Native',
+    level: '70%',
+    info: 'React Native is a framework for building native mobile applications using JavaScript and React. It allows developers to create cross-platform mobile apps with a single codebase, targeting both iOS and Android platforms. As a React Native developer, I leverage the power of React\'s component-based architecture to build intuitive and responsive mobile user interfaces.',
+    img: react
+  },
 ]
 
 export const social = [

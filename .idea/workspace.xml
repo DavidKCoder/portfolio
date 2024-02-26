@@ -1,12 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bd013d1f-2799-4ab5-af4e-c92a0a66dda5" name="Default Changelist" comment="Fixed the responsive skills, project pages.">
+    <list default="true" id="bd013d1f-2799-4ab5-af4e-c92a0a66dda5" name="Default Changelist" comment="Add toggle button for change theme, phone number.">
+      <change afterPath="$PROJECT_DIR$/src/components/ThemeToggle.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/404.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/500.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/styles/animated-btn.less" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/MessageInfo.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MessageInfo.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/About.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/About.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Contact.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Contact.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Greeting.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Greeting.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Header.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Main.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Main.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Projects.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Projects.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/constants.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/constants.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/_app.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/_app.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/styles/container.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/container.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/globals.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,9 +47,9 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\user\Desktop\portfolio\src\assets\img" />
       <recent name="C:\Users\user\Desktop\portfolio\public" />
       <recent name="C:\Users\user\Desktop\portfolio\src\assets\icons" />
-      <recent name="C:\Users\user\Desktop\portfolio\src\assets\img" />
       <recent name="C:\Users\user\Desktop\portfolio\src\assets\logos" />
       <recent name="C:\Users\user\Desktop\portfolio\src\assets" />
     </key>
@@ -82,7 +94,8 @@
       <workItem from="1708590928223" duration="13189000" />
       <workItem from="1708675833685" duration="8058000" />
       <workItem from="1708689761386" duration="2781000" />
-      <workItem from="1708797563148" duration="2342000" />
+      <workItem from="1708797563148" duration="5373000" />
+      <workItem from="1708929478115" duration="17292000" />
     </task>
     <task id="LOCAL-00001" summary="Add components.">
       <created>1708690725798</created>
@@ -91,7 +104,14 @@
       <option name="project" value="LOCAL" />
       <updated>1708690725798</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Fixed the responsive skills, project pages.">
+      <created>1708800011625</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1708800011625</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -100,13 +120,23 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Add components." />
     <MESSAGE value="Fixed the responsive skills, project pages." />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed the responsive skills, project pages." />
+    <MESSAGE value="Add toggle button for change theme, phone number," />
+    <MESSAGE value="Add toggle button for change theme, phone number." />
+    <option name="LAST_COMMIT_MESSAGE" value="Add toggle button for change theme, phone number." />
   </component>
   <component name="WindowStateProjectService">
-    <state x="262" y="0" key="CommitChangelistDialog2" timestamp="1708797261442">
+    <state x="438" y="148" key="#Web_Browsers" timestamp="1708977557524">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
-    <state x="262" y="0" key="CommitChangelistDialog2/0.0.1280.720/1920.0.1440.900@0.0.1280.720" timestamp="1708797261442" />
+    <state x="438" y="148" key="#Web_Browsers/0.0.1280.720/1920.0.1440.900@0.0.1280.720" timestamp="1708977557524" />
+    <state x="262" y="0" key="CommitChangelistDialog2" timestamp="1708978105996">
+      <screen x="0" y="0" width="1280" height="720" />
+    </state>
+    <state x="262" y="0" key="CommitChangelistDialog2/0.0.1280.720/1920.0.1440.900@0.0.1280.720" timestamp="1708978105996" />
+    <state x="121" y="54" key="DiffContextDialog" timestamp="1708799969175">
+      <screen x="0" y="0" width="1280" height="720" />
+    </state>
+    <state x="121" y="54" key="DiffContextDialog/0.0.1280.720/1920.0.1440.900@0.0.1280.720" timestamp="1708799969175" />
     <state x="0" y="0" key="FileDocumentManager.FileCacheConflict" timestamp="1708350967610">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
@@ -135,14 +165,14 @@
       <screen x="0" y="0" width="1280" height="720" />
     </state>
     <state x="93" y="93" width="1095" height="535" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1280.720@0.0.1280.720" timestamp="1708626616383" />
-    <state x="364" y="68" width="700" height="534" key="find.popup" timestamp="1708798894259">
+    <state x="364" y="68" width="700" height="534" key="find.popup" timestamp="1708975455868">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
-    <state x="364" y="68" width="700" height="534" key="find.popup/0.0.1280.720/1920.0.1440.900@0.0.1280.720" timestamp="1708798894259" />
-    <state x="347" y="93" width="587" height="534" key="find.popup/0.0.1280.720@0.0.1280.720" timestamp="1708371667572" />
-    <state x="623" y="41" width="672" height="678" key="search.everywhere.popup" timestamp="1708354689978">
+    <state x="364" y="68" width="700" height="534" key="find.popup/0.0.1280.720/1920.0.1440.900@0.0.1280.720" timestamp="1708975455868" />
+    <state x="347" y="93" width="587" height="534" key="find.popup/0.0.1280.720@0.0.1280.720" timestamp="1708937729290" />
+    <state x="299" y="113" width="672" height="678" key="search.everywhere.popup" timestamp="1708938296778">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
-    <state x="623" y="41" width="672" height="678" key="search.everywhere.popup/0.0.1280.720@0.0.1280.720" timestamp="1708354689978" />
+    <state x="299" y="113" width="672" height="678" key="search.everywhere.popup/0.0.1280.720@0.0.1280.720" timestamp="1708938296778" />
   </component>
 </project>

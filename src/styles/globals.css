@@ -12,13 +12,13 @@
     --font-code: "Source Code Pro", monospace;
     --font-ubuntu: "Ubuntu", sans-serif;
 
-    --main-bg: #464646;
     --text-color: #FFFFFF;
     --brand-1: #12F7D6;
     --brand-2: #98FAEC;
     --grey: #43454D;
     --bg-1: #292F36;
     --bg-2: #1A1E23;
+    /* Fixed colors ⤵ */
     --html: #E54F26;
     --css: #0C73B8;
     --js: #E7A020;
@@ -27,20 +27,30 @@
     --next: #2E2114;
     --node: #509941;
     --error: #FF013C;
+    /*----------------*/
+    background: var(--bg-2);
 }
 
-@media (prefers-color-scheme: dark) {
-    /*:root {*/
-    /*    --main-bg: #000000;*/
-    /*}*/
+[data-theme='dark'] {
+    --text-color: #FAEF5D;
+    --brand-1: #ED7D31;
+    --brand-2: #ED7D31;
+    --grey: #43454D;
+    --bg-1: #4F4A45;
+    --bg-2: #3f3b37;
+    background: var(--bg-2);
 }
 
 html,
 body {
     max-width: 100vw;
     overflow-x: hidden;
-    background: var(--bg-2);
     scroll-behavior: smooth;
+}
+
+h4 {
+    font-family: var(--font-code);
+    font-weight: 500
 }
 
 a:-webkit-any-link {

@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap');
-
 .show-container {
   height: 100vh;
   font-family: var(--font-ubuntu);
@@ -101,10 +99,10 @@
 
     .developer {
       color: var(--brand-1);
-      font-size: clamp(2rem, 16vw, 8rem);
+      font-size: clamp(2rem, 10vw, 8rem);
       font-weight: 400;
       font-style: normal;
-      padding-top: 30px;
+      padding: 30px 0;
     }
 
     .greeting {
@@ -229,6 +227,49 @@
       font-family: var(--font-code);
     }
   }
+
+  // Theme toggle
+  .rs-toggle {
+    position: fixed;
+    right: 2%;
+    top: 22%;
+    z-index: 1;
+    border-radius: 50%;
+
+    .rs-toggle-inner {
+      animation: rotating 3s linear infinite;
+      transform-origin: center;
+    }
+
+    @keyframes rotating {
+      from {
+        -ms-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg);
+      }
+      to {
+        -ms-transform: rotate(360deg);
+        -moz-transform: rotate(360deg);
+        -webkit-transform: rotate(360deg);
+        -o-transform: rotate(360deg);
+        transform: rotate(360deg);
+      }
+    }
+  }
+
+  .rs-toggle-lg .rs-toggle-presentation {
+    background: var(--brand-1);
+  }
+
+  .rs-toggle-checked .rs-toggle-presentation {
+    background: var(--html);
+  }
+
+  .rs-toggle-lg .rs-toggle-presentation:hover {
+    background: var(--brand-2);
+  }
 }
 
 /* skills */
@@ -342,6 +383,12 @@
   color: var(--node);
 }
 
+.skill-card:nth-child(8) .skill-level {
+  background: #4fdfff28;
+  border-color: #4fdfff;
+  color: #4fdfff;
+}
+
 // Project section
 .project-wrapper {
   height: 80vh;
@@ -403,12 +450,25 @@
     margin-bottom: 20px;
   }
 
-  .contact-sub-heading {
+  .contact-sub-heading, .contact-phone {
     text-align: center;
     font-size: clamp(14px, 16px, 18px);
     font-family: var(--font-code);
     color: var(--text-color);
     font-weight: 300;
+    line-height: 30px;
+  }
+
+  .contact-phone {
+    padding: 20px 0 0 0;
+
+    a {
+      padding: 2px 25px;
+      color: var(--brand-2);
+      border: 1px solid var(--brand-1);
+      border-radius: 10px;
+      font-weight: 600;
+    }
   }
 
   .rs-btn-ghost.rs-btn {
@@ -468,95 +528,6 @@
     box-shadow: 4px 0 0 var(--brand-1)
   }
 
-  /* Animated button */
-
-  .animated-btn,
-  .animated-btn:after {
-    font-family: 'Bebas Neue', sans-serif;
-    background: linear-gradient(45deg, transparent 5%, var(--brand-1) 5%);
-    border: 0;
-    color: #fff;
-    letter-spacing: 3px;
-    box-shadow: 4px 0 0 var(--error);
-    outline: transparent;
-    position: relative;
-    user-select: none;
-    -webkit-user-select: none;
-    touch-action: manipulation;
-  }
-
-  .animated-btn:after {
-    --slice-0: inset(50% 50% 50% 50%);
-    --slice-1: inset(80% -6px 0 0);
-    --slice-2: inset(50% -6px 30% 0);
-    --slice-3: inset(10% -6px 85% 0);
-    --slice-4: inset(40% -6px 43% 0);
-    --slice-5: inset(80% -6px 5% 0);
-
-    content: 'ALTERNATE TEXT';
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(45deg, transparent 3%, var(--brand-1) 3%, var(--brand-1) 5%, #FF013C 5%);
-    text-shadow: -3px -3px 0px var(--js), 3px 3px 0px var(--brand-1);
-    clip-path: var(--slice-0);
-  }
-
-  .animated-btn:hover:after {
-    animation: 1s glitch infinite;
-    animation-timing-function: steps(2, end);
-  }
-
-  @keyframes glitch {
-    0% {
-      clip-path: var(--slice-1);
-      transform: translate(-20px, -10px);
-    }
-    10% {
-      clip-path: var(--slice-3);
-      transform: translate(10px, 10px);
-    }
-    20% {
-      clip-path: var(--slice-1);
-      transform: translate(-10px, 10px);
-    }
-    30% {
-      clip-path: var(--slice-3);
-      transform: translate(0px, 5px);
-    }
-    40% {
-      clip-path: var(--slice-2);
-      transform: translate(-5px, 0px);
-    }
-    50% {
-      clip-path: var(--slice-3);
-      transform: translate(5px, 0px);
-    }
-    60% {
-      clip-path: var(--slice-4);
-      transform: translate(5px, 10px);
-    }
-    70% {
-      clip-path: var(--slice-2);
-      transform: translate(-10px, 10px);
-    }
-    80% {
-      clip-path: var(--slice-5);
-      transform: translate(20px, -10px);
-    }
-    90% {
-      clip-path: var(--slice-1);
-      transform: translate(-10px, 0px);
-    }
-    100% {
-      clip-path: var(--slice-1);
-      transform: translate(0);
-    }
-  }
-
   .rs-form-error-message {
     background: linear-gradient(45deg, var(--bg-2) 40%, var(--error) 5%);
     border: 1px solid var(--error);
@@ -610,6 +581,48 @@ footer {
 // Message
 .rs-message-success.rs-message-bordered {
   background: #4caf50;
+}
+
+.not-found, .page-error {
+  height: 100vh;
+  background: var(--bg-2);
+  color: var(--brand-1);
+  text-align: center;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  line-height: 2.5rem;
+  font-family: var(--font-code);
+
+  .e-404 {
+    font-size: clamp(3rem, 5rem, 6rem);
+  }
+
+  .rs-btn-ghost {
+    border-color: var(--error);
+    color: var(--brand-1);
+    background: transparent;
+  }
+
+  .rs-btn-ghost:hover {
+    background: linear-gradient(230deg, transparent 3%, var(--error) 3%, transparent, transparent);
+    border-color: var(--brand-1);
+    color: var(--text-color)
+  }
+
+  a {
+    margin-top: 20px;
+    color: var(--redux);
+    font-family: var(--font-ubuntu);
+    cursor: pointer;
+    font-size: clamp(18px, 20px, 22px);
+  }
+}
+
+[data-theme='dark'] {
+  .about-wrapper, .project-wrapper {
+    background-image: none;
+  }
 }
 
 // Media
@@ -802,6 +815,13 @@ footer {
   footer {
     .social-media-icons {
       padding: 10px 0 0 0
+    }
+  }
+
+  .not-found, .page-error {
+    .e-404 {
+      display: block;
+      margin-bottom: 20px
     }
   }
 
