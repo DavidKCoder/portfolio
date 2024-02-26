@@ -20,8 +20,8 @@ const CustomNavbar = ({ onSelect, activeKey, ...props }) => {
           <Link href="/#projects" passHref>
             <span className="rs-navbar-item">Projects</span>
           </Link>
-          <Link href="/#skills" passHref>
-            <span className="rs-navbar-item">Skills</span>
+          <Link href="/#about" passHref>
+            <span className="rs-navbar-item">About Me</span>
           </Link>
           <Link href="/#contact" passHref>
             <span className="rs-navbar-item">Contact</span>

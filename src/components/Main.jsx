@@ -10,6 +10,7 @@ import '../scroll'
 import Loader from "./Loader";
 import FooterSection from "./FooterSection";
 import BackTop from "./BackTop";
+import ThemeToggle from "./ThemeToggle";
 
 const Main = () => {
   const [ loading, setLoading ] = useState(true);
@@ -25,22 +26,23 @@ const Main = () => {
   }
 
   return (
-      <div className="show-container">
-        <Container>
-          <Header/>
-          <Content>
-            <Divider className="divider"/>
-            <Greeting/>
-            <About/>
-            <Skills/>
-            <Projects/>
-            <Contact/>
-            <Divider className="divider footer"/>
-          </Content>
-          <FooterSection/>
-        </Container>
-        <BackTop/>
-      </div>
+    <div className="show-container">
+      <ThemeToggle/>
+      <Container>
+        <Header/>
+        <Content>
+          <Divider className="divider"/>
+          <Greeting/>
+          <About/>
+          <Skills/>
+          <Projects/>
+          <Contact/>
+          <Divider className="divider footer"/>
+        </Content>
+        <FooterSection/>
+      </Container>
+      <BackTop/>
+    </div>
   )
 }
 
