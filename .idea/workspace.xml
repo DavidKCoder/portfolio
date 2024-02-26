@@ -1,24 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bd013d1f-2799-4ab5-af4e-c92a0a66dda5" name="Default Changelist" comment="Add toggle button for change theme, phone number.">
-      <change afterPath="$PROJECT_DIR$/src/components/ThemeToggle.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/404.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/500.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/styles/animated-btn.less" afterDir="false" />
+    <list default="true" id="bd013d1f-2799-4ab5-af4e-c92a0a66dda5" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/About.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/About.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Contact.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Contact.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Greeting.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Greeting.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Header.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Main.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Main.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Projects.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Projects.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/constants.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/constants.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/_app.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/_app.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/styles/container.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/container.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/globals.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -95,7 +80,7 @@
       <workItem from="1708675833685" duration="8058000" />
       <workItem from="1708689761386" duration="2781000" />
       <workItem from="1708797563148" duration="5373000" />
-      <workItem from="1708929478115" duration="17292000" />
+      <workItem from="1708929478115" duration="18145000" />
     </task>
     <task id="LOCAL-00001" summary="Add components.">
       <created>1708690725798</created>
@@ -111,7 +96,14 @@
       <option name="project" value="LOCAL" />
       <updated>1708800011625</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Add a toggle button to change the theme.">
+      <created>1708978251705</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1708978251705</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -122,17 +114,19 @@
     <MESSAGE value="Fixed the responsive skills, project pages." />
     <MESSAGE value="Add toggle button for change theme, phone number," />
     <MESSAGE value="Add toggle button for change theme, phone number." />
-    <option name="LAST_COMMIT_MESSAGE" value="Add toggle button for change theme, phone number." />
+    <MESSAGE value="Add toggle button for change theme." />
+    <MESSAGE value="Add a toggle button to change the theme." />
+    <option name="LAST_COMMIT_MESSAGE" value="Add a toggle button to change the theme." />
   </component>
   <component name="WindowStateProjectService">
     <state x="438" y="148" key="#Web_Browsers" timestamp="1708977557524">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
     <state x="438" y="148" key="#Web_Browsers/0.0.1280.720/1920.0.1440.900@0.0.1280.720" timestamp="1708977557524" />
-    <state x="262" y="0" key="CommitChangelistDialog2" timestamp="1708978105996">
+    <state x="262" y="0" key="CommitChangelistDialog2" timestamp="1708978250632">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
-    <state x="262" y="0" key="CommitChangelistDialog2/0.0.1280.720/1920.0.1440.900@0.0.1280.720" timestamp="1708978105996" />
+    <state x="262" y="0" key="CommitChangelistDialog2/0.0.1280.720/1920.0.1440.900@0.0.1280.720" timestamp="1708978250632" />
     <state x="121" y="54" key="DiffContextDialog" timestamp="1708799969175">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
