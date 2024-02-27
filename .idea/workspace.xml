@@ -4,6 +4,7 @@
     <list default="true" id="bd013d1f-2799-4ab5-af4e-c92a0a66dda5" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/styles/container.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/container.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/mouse.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/mouse.less" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,6 +82,7 @@
       <workItem from="1708689761386" duration="2781000" />
       <workItem from="1708797563148" duration="5373000" />
       <workItem from="1708929478115" duration="18145000" />
+      <workItem from="1709020619728" duration="1380000" />
     </task>
     <task id="LOCAL-00001" summary="Add components.">
       <created>1708690725798</created>
@@ -103,7 +105,14 @@
       <option name="project" value="LOCAL" />
       <updated>1708978251705</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Fix sections styles.">
+      <created>1708979308059</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1708979308059</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -116,17 +125,18 @@
     <MESSAGE value="Add toggle button for change theme, phone number." />
     <MESSAGE value="Add toggle button for change theme." />
     <MESSAGE value="Add a toggle button to change the theme." />
-    <option name="LAST_COMMIT_MESSAGE" value="Add a toggle button to change the theme." />
+    <MESSAGE value="Fix sections styles." />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix sections styles." />
   </component>
   <component name="WindowStateProjectService">
     <state x="438" y="148" key="#Web_Browsers" timestamp="1708977557524">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
     <state x="438" y="148" key="#Web_Browsers/0.0.1280.720/1920.0.1440.900@0.0.1280.720" timestamp="1708977557524" />
-    <state x="262" y="0" key="CommitChangelistDialog2" timestamp="1708978250632">
+    <state x="262" y="0" key="CommitChangelistDialog2" timestamp="1708979307336">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
-    <state x="262" y="0" key="CommitChangelistDialog2/0.0.1280.720/1920.0.1440.900@0.0.1280.720" timestamp="1708978250632" />
+    <state x="262" y="0" key="CommitChangelistDialog2/0.0.1280.720/1920.0.1440.900@0.0.1280.720" timestamp="1708979307336" />
     <state x="121" y="54" key="DiffContextDialog" timestamp="1708799969175">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
@@ -159,10 +169,10 @@
       <screen x="0" y="0" width="1280" height="720" />
     </state>
     <state x="93" y="93" width="1095" height="535" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1280.720@0.0.1280.720" timestamp="1708626616383" />
-    <state x="364" y="68" width="700" height="534" key="find.popup" timestamp="1708975455868">
+    <state x="364" y="68" width="700" height="534" key="find.popup" timestamp="1709020923068">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
-    <state x="364" y="68" width="700" height="534" key="find.popup/0.0.1280.720/1920.0.1440.900@0.0.1280.720" timestamp="1708975455868" />
+    <state x="364" y="68" width="700" height="534" key="find.popup/0.0.1280.720/1920.0.1440.900@0.0.1280.720" timestamp="1709020923068" />
     <state x="347" y="93" width="587" height="534" key="find.popup/0.0.1280.720@0.0.1280.720" timestamp="1708937729290" />
     <state x="299" y="113" width="672" height="678" key="search.everywhere.popup" timestamp="1708938296778">
       <screen x="0" y="0" width="1280" height="720" />
