@@ -19,6 +19,8 @@
 # misc
 .DS_Store
 *.pem
+.idea/
+**/.idea/workspace.xml **/.idea/tasks.xml
 
 # debug
 npm-debug.log*
