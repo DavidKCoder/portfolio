@@ -22,7 +22,7 @@ export default function Home() {
         <meta property="og:title" content="David K."/>
         <meta property="og:description" content="David K. portfolio"/>
         <meta property="og:image" content="../assets/img/meta_img.png"/>
-        <link rel="icon" href="/public/favicon.ico"/>
+        <link rel="icon" href="/favicon.ico"/>
         <meta name="viewport" content="width=device-width, initial-scale=1"/>
         <link rel="icon" href="/favicon.ico"/>
       </Head>
