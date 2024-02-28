@@ -3,10 +3,14 @@ import PageNextIcon from '@rsuite/icons/PageNext';
 
 const BackTop = () => {
 
+  const scrollToTop = () => {
+    window.scrollTo(0, 0)
+  }
+
   return (
-    <a className="back-top" href="#home">
+    <span className="back-top" onClick={scrollToTop}>
       <PageNextIcon/>
-    </a>
+    </span>
   )
 }
 

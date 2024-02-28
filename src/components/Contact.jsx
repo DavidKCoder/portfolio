@@ -6,7 +6,7 @@ import PhoneIcon from '@rsuite/icons/legacy/Phone';
 const Contact = () => {
   return (
     <div id="contact" className="contact-wrapper">
-      <h2 className="contact-heading">Contact me</h2>
+      <h2 className="contact-heading">{`< contact me />`}</h2>
       <p className="contact-sub-heading">
         I’m currently available for work.
       </p>

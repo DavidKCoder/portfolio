@@ -5,14 +5,18 @@ import '../styles/animated-btn.less';
 import '../styles/mouse.less';
 import '../styles/loader.css';
 import 'rsuite/dist/rsuite-no-reset.min.css';
+import "../tabHack";
 import { ThemeProvider } from 'next-themes';
+import Layout from "../components/Layout";
 import { ToasterContextProvider } from "../context/toaster-context";
 
 export default function App({ Component, pageProps }) {
   return (
     <ToasterContextProvider>
       <ThemeProvider>
-        <Component {...pageProps} />
+        <Layout>
+          <Component {...pageProps} />
+        </Layout>
       </ThemeProvider>
     </ToasterContextProvider>
   );
