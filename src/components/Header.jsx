@@ -1,45 +1,89 @@
 import React, { useState } from "react";
-import { Navbar, Nav } from 'rsuite';
+import { Navbar, Nav, Drawer, IconButton } from 'rsuite';
 import Link from 'next/link';
 import SocialMedia from "./SocialMedia";
+import MenuIcon from '@rsuite/icons/Menu';
+import useWindowWidth from "../hooks/useWindowWidth";
 
-const CustomNavbar = ({ onSelect, activeKey, ...props }) => {
-  return (
-    <Navbar {...props} id="header">
-      <Link href="/" passHref className="brand-name">
-        <span className="rs-navbar-brand">{'<DK/>'} <span>DavidKarapetyan</span></span>
-      </Link>
-      <Nav onSelect={onSelect} activeKey={activeKey}>
-        <Link href="/#home" passHref>
-          <span className="rs-navbar-item">Home</span>
+const CustomNavbar = ({ windowWidth, onSelect, activeKey, open, setOpen, ...props }) => {
+    return (
+      <Navbar {...props} id="header">
+        <Link href="/" passHref className="brand-name">
+          <span className="rs-navbar-brand">{'<DK/>'} <span>DavidKarapetyan</span></span>
+          {windowWidth < 500 &&
+          <IconButton onClick={() => setOpen(true)} icon={<MenuIcon/>} color="blue" appearance="primary"/>
+          }
         </Link>
-        <Link href="/#skills" passHref>
-          <span className="rs-navbar-item">Skills</span>
-        </Link>
-        <Nav.Menu title="About">
-          <Link href="/#projects" passHref>
-            <span className="rs-navbar-item">Projects</span>
-          </Link>
-          <Link href="/#about" passHref>
-            <span className="rs-navbar-item">About Me</span>
-          </Link>
-          <Link href="/#contact" passHref>
-            <span className="rs-navbar-item">Contact</span>
-          </Link>
-        </Nav.Menu>
-      </Nav>
-      <Nav pullRight>
-        <SocialMedia/>
-      </Nav>
-    </Navbar>
-  );
-};
+        {windowWidth > 500 ?
+          <>
+            <Nav onSelect={onSelect} activeKey={activeKey}>
+              <Link href="/#home" passHref>
+                <span className="rs-navbar-item">Home</span>
+              </Link>
+              <Link href="/#skills" passHref>
+                <span className="rs-navbar-item">Skills</span>
+              </Link>
+              <Nav.Menu title="About">
+                <Link href="/#projects" passHref>
+                  <span className="rs-navbar-item">Projects</span>
+                </Link>
+                <Link href="/#about" passHref>
+                  <span className="rs-navbar-item">About Me</span>
+                </Link>
+                <Link href="/#contact" passHref>
+                  <span className="rs-navbar-item">Contact</span>
+                </Link>
+              </Nav.Menu>
+            </Nav>
+            <Nav pullRight>
+              <SocialMedia/>
+            </Nav>
+          </> :
+          <Drawer size="60%" open={open} onClose={() => setOpen(false)}>
+            <Drawer.Body>
+              <Nav onSelect={onSelect} activeKey={activeKey}>
+                <Link href="/#home" passHref>
+                  <span className="rs-navbar-item">Home</span>
+                </Link>
+                <Link href="/#skills" passHref>
+                  <span className="rs-navbar-item">Skills</span>
+                </Link>
+                <Nav.Menu title="About">
+                  <Link href="/#projects" passHref>
+                    <span className="rs-navbar-item">Projects</span>
+                  </Link>
+                  <Link href="/#about" passHref>
+                    <span className="rs-navbar-item">About Me</span>
+                  </Link>
+                  <Link href="/#contact" passHref>
+                    <span className="rs-navbar-item">Contact</span>
+                  </Link>
+                </Nav.Menu>
+              </Nav>
+              <Nav pullRight>
+                <SocialMedia/>
+              </Nav>
+            </Drawer.Body>
+          </Drawer>
+        }
+      </Navbar>
+    );
+  }
+;
 
 const Header = () => {
+  const windowWidth = useWindowWidth();
   const [ activeKey, setActiveKey ] = useState(null);
+  const [ open, setOpen ] = React.useState(false);
 
   return (
-    <CustomNavbar appearance="subtle" activeKey={activeKey} onSelect={setActiveKey}/>
+    <CustomNavbar
+      windowWidth={windowWidth}
+      appearance="subtle"
+      activeKey={activeKey}
+      onSelect={setActiveKey}
+      open={open}
+      setOpen={setOpen}/>
   )
 }
 
