@@ -2,6 +2,7 @@ import React from "react";
 import { Image } from "next/dist/client/image-component";
 import { skills } from "../constants";
 import { Progress } from 'rsuite';
+import '../splitting'
 
 const Skills = () => {
   return (

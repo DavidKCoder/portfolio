@@ -628,6 +628,21 @@ footer {
   }
 }
 
+h2.splitting {
+  color: saturate(lighten(#182952, 55%), 60%);
+
+  .char {
+    transition: transform .3s cubic-bezier(.3, 0, .3, 1), opacity .3s linear;
+    transition-delay: calc(20ms * var(--char-index));
+
+  }
+
+  &[data-scroll="out"] .char {
+    opacity: 0.1;
+    transform: translateY(.25em);
+  }
+}
+
 // Media
 @media only screen and (max-width: 900px) {
   .show-container {
