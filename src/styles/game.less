@@ -83,6 +83,35 @@
     padding: 5px 30px;
     font-size: clamp(14px, 16px, 18px);
     font-family: var(--font-ubuntu);
-    border-radius: 8px;
+    font-weight: 500;
+    border-radius: 6px;
+    color: var(--brand-1)
+  }
+}
+
+.rs-modal-dialog {
+  position: absolute;
+  width: -webkit-fill-available;
+  top: 40vh
+}
+
+.rs-modal-content {
+  background-color: var(--bg-1) !important;
+  font-family: var(--font-ubuntu);
+
+  .rs-modal-body {
+    text-align: center;
+    margin-bottom: 0;
+    line-height: 25px;
+    color: var(--text-color);
+
+    h3 {
+      color: var(--brand-1);
+    }
+  }
+
+  button {
+    background: var(--bg-2);
+    color: var(--text-color);
   }
 }

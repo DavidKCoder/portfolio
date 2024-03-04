@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { Button } from "rsuite";
+import WinnerModal from "./WinnerModal";
 
 function Square({ value, onSquareClick }) {
   let className = 'square';
@@ -17,7 +19,7 @@ function Square({ value, onSquareClick }) {
   );
 }
 
-function Board({ xIsNext, squares, onPlay }) {
+function Board({ xIsNext, squares, onPlay, restart }) {
   function handleClick(i) {
     if (calculateWinner(squares) || squares[i]) {
       return;
@@ -57,6 +59,7 @@ function Board({ xIsNext, squares, onPlay }) {
         <Square value={squares[7]} onSquareClick={() => handleClick(7)}/>
         <Square value={squares[8]} onSquareClick={() => handleClick(8)}/>
       </div>
+      {winner && <WinnerModal winner={winner} restart={restart}/>}
     </>
   );
 }
@@ -103,10 +106,10 @@ export default function Game() {
       <div className="game">
         <h3 className="game-name">Tic - Tac - Toe</h3>
         <div className="game-board">
-          <Board xIsNext={xIsNext} squares={currentSquares} onPlay={handlePlay}/>
+          <Board xIsNext={xIsNext} squares={currentSquares} onPlay={handlePlay} restart={() => jumpTo(0)}/>
         </div>
         <div className="game-info">
-          <button onClick={() => jumpTo(0)}>Restart</button>
+          <Button onClick={() => jumpTo(0)}>Restart</Button>
         </div>
       </div>
     </div>
