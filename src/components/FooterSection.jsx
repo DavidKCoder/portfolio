@@ -1,27 +1,15 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import Link from 'next/link';
 import { Image } from "next/dist/client/image-component";
 import { social } from "../constants";
+import useWindowWidth from "../hooks/useWindowWidth";
 
 const FooterSection = () => {
-  const [ showSocialMediaIcons, setShowSocialMediaIcons ] = useState(true);
-
-  useEffect(() => {
-    const handleResize = () => {
-      setShowSocialMediaIcons(window.innerWidth > 450);
-    };
-
-    window.addEventListener('resize', handleResize);
-    handleResize(); // Initial check
-
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    };
-  }, []);
+  const windowWidth = useWindowWidth();
 
   return (
     <footer>
-      {!showSocialMediaIcons && (
+      {windowWidth < 450 && (
         <div className="social-media-icons">
           {social.map((s) => (
             <Link key={s.name} href={s.link} target="_blank">
@@ -32,7 +20,7 @@ const FooterSection = () => {
       )}
       <h4>© 2023 David K. | All rights reserved.</h4>
       <h4>Privacy Policy</h4>
-      {showSocialMediaIcons && (
+      {windowWidth > 450 && (
         <div className="social-media-icons">
           {social.map((s) => (
             <Link key={s.name} href={s.link} target="_blank">

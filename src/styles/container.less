@@ -163,6 +163,13 @@
 }
 
 #header {
+  width: -webkit-fill-available;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--bg-1);
+
   .rs-dropdown-menu {
     background: var(--bg-1);
   }
@@ -227,7 +234,7 @@
   background: var(--brand-2);
 }
 
-.rs-navbar {
+.rs-navbar, .rs-navbar-nav {
   font-family: var(--font-code);
   color: var(--text-color);
 
@@ -597,6 +604,24 @@ footer {
   }
 }
 
+// Drawer
+.rs-drawer-body {
+  background: var(--bg-1);
+  z-index: 100;
+
+  .rs-navbar-nav {
+    display: contents;
+
+    .rs-dropdown-menu {
+      background: var(--bg-1);
+    }
+  }
+
+  .rs-navbar-nav.rs-navbar-right {
+    display: flex;
+  }
+}
+
 [data-theme='dark'] {
   .about-wrapper, .project-wrapper {
     background-image: none;
@@ -727,7 +752,8 @@ footer {
 @media only screen and (max-width: 500px) {
   .brand-name {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    padding-inline: 15px
   }
 
   .skills-container {
