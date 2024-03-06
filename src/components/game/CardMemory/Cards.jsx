@@ -8,7 +8,8 @@ import vueImg from '../../../assets/img/games/vue.png';
 import angularImg from '../../../assets/img/games/angular.png';
 import nextJsImg from '../../../assets/img/games/nextjs.png';
 import Card from './Card';
-import WinnerModal from "../modal/WinnerModal";
+import WinnerModal from "../features/modal/WinnerModal";
+import Equalizer from "../../Equalizer";
 
 const initialCardState = [
   { id: 1, img: htmlImg, stat: "" },
@@ -66,11 +67,19 @@ function Cards() {
     }
   }
 
+  function handleTogglePlayback() {
+    const audioElement = document.getElementById('audio');
+    if (audioElement) {
+      audioElement.muted = !audioElement.muted;
+    }
+  }
+
   return (
     <div className="game-wrapper">
-      <audio id="audio" autoPlay>
+      <audio id="audio" autoPlay loop>
         <source src="/sounds/forest-walk.mp3" type="audio/mpeg"/>
       </audio>
+      <Equalizer handleTogglePlayback={handleTogglePlayback}/>
       <div className="background-container"/>
       <h3 className="game-name">Memory Card Game</h3>
       <div className="memory-game-container">

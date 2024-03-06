@@ -1,6 +1,6 @@
 import React from "react";
-import TicTacToe from "../../components/game/CardMemory/Cards";
+import CardMemory from "../../components/game/CardMemory/Cards";
 
 export default function Game() {
-  return <TicTacToe/>
+  return <CardMemory/>
 }

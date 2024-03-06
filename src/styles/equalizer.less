@@ -1,0 +1,65 @@
+.equalizer {
+  width: 60px;
+  height: 60px;
+  border: 1px solid var(--brand-1);
+  border-radius: 20px 5px 20px 5px;
+  position: absolute;
+  top: 65px;
+  left: 90%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+
+  &:after {
+    content: 'PAUSE';
+    position: absolute;
+    bottom: -30px;
+    width: 100%;
+    text-align: center;
+    font-weight: 900;
+    color: var(--brand-1);
+    font-family: var(--font-code);
+    font-size: 12px;
+    letter-spacing: 0.6px;
+  }
+
+  &.paused {
+    transform: translate(-50%, -50%);
+
+    span {
+      height: 2px !important;
+    }
+
+    &:after {
+      content: 'PLAY';
+    }
+  }
+
+  span {
+    background-color: var(--brand-1);
+    width: 6px;
+    height: 0;
+    bottom: 15px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    display: block;
+    position: absolute;
+    transition: height 0.2s linear;
+
+    &:nth-child(1) {
+      margin-left: -20px;
+    }
+
+    &:nth-child(2) {
+      margin-left: -10px;
+    }
+
+    &:nth-child(4) {
+      margin-left: 10px;
+      background-color: var(--html);
+    }
+
+    &:nth-child(5) {
+      margin-left: 20px;
+    }
+  }
+}

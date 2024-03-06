@@ -10,7 +10,9 @@ const CustomNavbar = ({ windowWidth, onSelect, activeKey, open, setOpen, ...prop
   return (
     <Navbar {...props} id="header">
       <span className="brand-name">
-        <span className="rs-navbar-brand">{'<DK/>'} <span>DavidKarapetyan</span></span>
+         <Link href="/#home" passHref>
+           <span className="rs-navbar-brand">{'<DK/>'} <span>DavidKarapetyan</span></span>
+         </Link>
         {windowWidth < 715 &&
         <IconButton onClick={() => setOpen(true)} icon={<MenuIcon/>} color="blue" appearance="primary"/>
         }
@@ -57,14 +59,6 @@ const CustomNavbar = ({ windowWidth, onSelect, activeKey, open, setOpen, ...prop
               <Link href="/#skills" passHref>
                 <span className="rs-navbar-item">Skills</span>
               </Link>
-              <Nav.Menu title="Games" icon={<Gamepad fill={'var(--brand-1)'}/>}>
-                <Link href="/game/tic-tac-toe" passHref>
-                  <span className="rs-navbar-item">Tic-Tac-Toe</span>
-                </Link>
-                <Link href="/game/memory-card" passHref>
-                  <span className="rs-navbar-item">Memory Card</span>
-                </Link>
-              </Nav.Menu>
               <Nav.Menu title="About">
                 <Link href="/#projects" passHref>
                   <span className="rs-navbar-item">Projects</span>
@@ -74,6 +68,14 @@ const CustomNavbar = ({ windowWidth, onSelect, activeKey, open, setOpen, ...prop
                 </Link>
                 <Link href="/#contact" passHref>
                   <span className="rs-navbar-item">Contact</span>
+                </Link>
+              </Nav.Menu>
+              <Nav.Menu title="Games" icon={<Gamepad fill={'var(--brand-1)'}/>}>
+                <Link href="/game/tic-tac-toe" passHref>
+                  <span className="rs-navbar-item">Tic-Tac-Toe</span>
+                </Link>
+                <Link href="/game/memory-card" passHref>
+                  <span className="rs-navbar-item">Memory Card</span>
                 </Link>
               </Nav.Menu>
             </Nav>
