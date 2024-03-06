@@ -4,17 +4,18 @@ import Link from 'next/link';
 import SocialMedia from "./SocialMedia";
 import useWindowWidth from "../hooks/useWindowWidth";
 import MenuIcon from '@rsuite/icons/Menu';
+import Gamepad from '@rsuite/icons/legacy/Gamepad';
 
 const CustomNavbar = ({ windowWidth, onSelect, activeKey, open, setOpen, ...props }) => {
   return (
     <Navbar {...props} id="header">
       <span className="brand-name">
         <span className="rs-navbar-brand">{'<DK/>'} <span>DavidKarapetyan</span></span>
-        {windowWidth < 500 &&
+        {windowWidth < 715 &&
         <IconButton onClick={() => setOpen(true)} icon={<MenuIcon/>} color="blue" appearance="primary"/>
         }
       </span>
-      {windowWidth > 500 ?
+      {windowWidth > 715 ?
         <>
           <Nav onSelect={onSelect} activeKey={activeKey}>
             <Link href="/#home" passHref>
@@ -23,8 +24,14 @@ const CustomNavbar = ({ windowWidth, onSelect, activeKey, open, setOpen, ...prop
             <Link href="/#skills" passHref>
               <span className="rs-navbar-item">Skills</span>
             </Link>
-            <Link href="/game" passHref><span className="rs-navbar-item">Game</span>
-            </Link>
+            <Nav.Menu title="Games" icon={<Gamepad fill={'var(--brand-1)'}/>}>
+              <Link href="/game/tic-tac-toe" passHref>
+                <span className="rs-navbar-item">Tic-Tac-Toe</span>
+              </Link>
+              <Link href="/game/memory-card" passHref>
+                <span className="rs-navbar-item">Memory Card</span>
+              </Link>
+            </Nav.Menu>
             <Nav.Menu title="About">
               <Link href="/#projects" passHref>
                 <span className="rs-navbar-item">Projects</span>
@@ -50,9 +57,14 @@ const CustomNavbar = ({ windowWidth, onSelect, activeKey, open, setOpen, ...prop
               <Link href="/#skills" passHref>
                 <span className="rs-navbar-item">Skills</span>
               </Link>
-              <Link href="/game" passHref>
-                <span className="rs-navbar-item">Game</span>
-              </Link>
+              <Nav.Menu title="Games" icon={<Gamepad fill={'var(--brand-1)'}/>}>
+                <Link href="/game/tic-tac-toe" passHref>
+                  <span className="rs-navbar-item">Tic-Tac-Toe</span>
+                </Link>
+                <Link href="/game/memory-card" passHref>
+                  <span className="rs-navbar-item">Memory Card</span>
+                </Link>
+              </Nav.Menu>
               <Nav.Menu title="About">
                 <Link href="/#projects" passHref>
                   <span className="rs-navbar-item">Projects</span>

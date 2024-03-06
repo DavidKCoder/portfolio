@@ -8,7 +8,7 @@ const SocialMedia = () => {
 
   useEffect(() => {
     const handleResize = () => {
-      setHideSocialName(window.innerWidth <= 500)
+      setHideSocialName(window.innerWidth <= 905)
     };
 
     window.addEventListener('resize', handleResize);

@@ -36,13 +36,6 @@
   align-content: center;
   position: relative;
 
-  .game-name {
-    font-size: clamp(1.5rem, 2rem, 2.5rem);
-    font-family: var(--font-ubuntu);
-    color: var(--text-color);
-    margin-bottom: 15px;
-  }
-
   .game-board {
     background: var(--brand-1);
     border-radius: 10px;
@@ -57,6 +50,14 @@
   }
 }
 
+.game-name {
+  text-align: center;
+  font-size: clamp(1.5rem, 2rem, 2.5rem);
+  font-family: var(--font-ubuntu);
+  color: var(--text-color);
+  margin: 15px 0;
+}
+
 .board-row {
   display: flex;
 
@@ -68,7 +69,7 @@
   }
 
   .player-x {
-    color: var(--brand-1)
+    color: var(--error)
   }
 
   .player-o {
@@ -92,7 +93,7 @@
 .rs-modal-dialog {
   position: absolute;
   width: -webkit-fill-available;
-  top: 40vh
+  top: 30vh;
 }
 
 .rs-modal-content {
@@ -113,5 +114,88 @@
   button {
     background: var(--bg-2);
     color: var(--text-color);
+  }
+}
+
+// Memory Game
+.memory-game-container {
+  padding: 10px 40px;
+  height: 80vh;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  gap: 1em;
+}
+
+.card {
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  transform: rotateY(180deg);
+  animation: 2s hideCard linear;
+  transition: transform 0.5s;
+}
+
+@keyframes hideCard {
+  0%, 70% {
+    transform: rotateY(0);
+  }
+  100% {
+    transform: rotateY(180deg);
+  }
+}
+
+.card img {
+  max-width: 80%;
+  max-height: 80%;
+  transition: transform 0.5s;
+  transform: scale(0);
+  animation: 2s hideImage linear;
+}
+
+@keyframes hideImage {
+  0%, 70% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+
+.card.active {
+  transform: rotateY(0);
+}
+
+.card.correct {
+  background-color: var(--node);
+}
+
+.card.wrong {
+  background-color: var(--error);
+}
+
+.card.active img {
+  transform: scale(1);
+}
+
+@media only screen and (max-width: 550px) {
+  .memory-game-container {
+    padding: 10px 20px;
+    height: 600px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: .5em;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .memory-game-container {
+    padding: 10px;
+    height: 500px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: .5em;
   }
 }
