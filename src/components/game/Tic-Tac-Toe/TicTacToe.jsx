@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Button } from "rsuite";
-import WinnerModal from "../modal/WinnerModal";
+import WinnerModal from "../features/modal/WinnerModal";
+import Equalizer from "../../Equalizer";
 
 function Square({ value, onSquareClick }) {
   let className = 'square';
@@ -100,11 +101,19 @@ export default function Game() {
     setCurrentMove(nextMove);
   }
 
+  function handleTogglePlayback() {
+    const audioElement = document.getElementById('audio');
+    if (audioElement) {
+      audioElement.muted = !audioElement.muted;
+    }
+  }
+
   return (
     <div className="game-wrapper">
-      <audio id="audio" autoPlay>
-        <source src="/sounds/music.wav" type="audio/mpeg"/>
+      <audio id="audio" autoPlay loop>
+        <source src="/sounds/pixel.mp3" type="audio/mpeg"/>
       </audio>
+      <Equalizer handleTogglePlayback={handleTogglePlayback}/>
       <div className="background-container"/>
       <div className="game">
         <h3 className="game-name">Tic - Tac - Toe</h3>
