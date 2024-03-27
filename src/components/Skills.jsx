@@ -1,10 +1,13 @@
-import React from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { Image } from "next/dist/client/image-component";
 import { skills } from "../constants";
 import { Progress } from 'rsuite';
 import '../splitting'
+import ScrollContext from "../context/scroll";
 
 const Skills = () => {
+  const { scrollTop } = useContext(ScrollContext);
+
   return (
     <div id="skills" className="skill-section">
       <h2 className="skill-heading">{`< skills />`}</h2>

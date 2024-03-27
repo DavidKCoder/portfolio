@@ -1,18 +1,21 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import Header from "./Header";
 import ThemeToggle from "./ThemeToggle";
 import BackTop from "./BackTop";
 import FooterSection from "./FooterSection";
 import Loader from "./Loader";
 import { Divider } from "rsuite";
+import ScrollContext from "../context/scroll";
 
 export default function Layout({ children }) {
+  const { scrollTop } = useContext(ScrollContext);
+
   const [ loading, setLoading ] = useState(true);
 
   useEffect(() => {
     setTimeout(() => {
       setLoading(false)
-    }, 3000)
+    }, 3000);
   }, []);
 
   if (loading) {
@@ -25,7 +28,7 @@ export default function Layout({ children }) {
       <Divider className="divider"/>
       <ThemeToggle/>
       <main>{children}</main>
-      <BackTop/>
+      {scrollTop > 650 && <BackTop/>}
       <Divider className="divider footer"/>
       <FooterSection/>
     </>
