@@ -244,7 +244,10 @@
   }
 
   .rs-navbar-item:hover {
-    background-color: transparent;
+    background-color: var(--brand-2) !important;
+    color: var(--bg-2) !important;
+    border-radius: 0 0 10px 10px;
+    transition: 200ms
   }
 
   .rs-navbar-item.rs-navbar-item-active {
@@ -384,8 +387,14 @@
   }
 }
 
+// Social section {
+#social-media {
+  padding: 20px 100px
+}
+
 // Contact section
-.contact-wrapper {
+.contact-wrapper,
+.social-wrapper {
   background: var(--bg-2);
   display: grid;
   align-content: center;
@@ -490,15 +499,15 @@
 .back-top {
   position: fixed;
   color: var(--text-color);
-  width: 50px;
   background: var(--brand-1);
   bottom: 30px;
   right: 30px;
   border-radius: 12px;
+  padding: 2px;
 
   svg {
     transform: rotate(270deg);
-    font-size: 3rem;
+    font-size: 2rem;
   }
 }
 
@@ -605,6 +614,10 @@ footer {
 }
 
 // Drawer
+#drawer-body {
+  padding: 0 60px;
+}
+
 .rs-drawer-body {
   background: var(--bg-1);
   z-index: 100;

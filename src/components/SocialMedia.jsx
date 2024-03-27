@@ -1,39 +1,20 @@
-import { Nav } from "rsuite";
-import React, { useEffect, useState } from "react";
-import { social } from "../constants";
-import IconComponent from "./IconComponent";
+import React from "react";
+import LinkedIn from "./socialIcons/LinkedIn";
+import Instagram from "./socialIcons/Instagram";
 
 const SocialMedia = () => {
-  const [ hideSocialName, setHideSocialName ] = useState(false)
-
-  useEffect(() => {
-    const handleResize = () => {
-      setHideSocialName(window.innerWidth <= 905)
-    };
-
-    window.addEventListener('resize', handleResize);
-    handleResize()
-
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    };
-  }, []);
-
-
   return (
-    <>
-      {social.map((so) => {
-        const { eventKey, name, link } = so;
-        // Dynamically access the icon component based on the name
-        const Icon = <IconComponent name={name} alt={name}/>;
-        return (
-          <Nav.Item key={eventKey} icon={Icon} eventKey={eventKey} href={link} target="_blank">
-            {hideSocialName ? null : name}
-          </Nav.Item>
-        )
-      })}
-    </>
+    <div id="social-media" className="social-wrapper">
+      <h2 className="contact-heading">{`< social media />`}</h2>
+      <p className="contact-sub-heading">
+        Discover more about me across various social networks.
+      </p>
+      <div style={{ width: "50%", margin: 'auto 0', display: 'flex', justifyContent: 'space-between' }}>
+        <LinkedIn/>
+        <Instagram/>
+      </div>
+    </div>
   )
 }
 
-export default SocialMedia;
+export default SocialMedia

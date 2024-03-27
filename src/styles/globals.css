@@ -27,6 +27,9 @@
     --next: #000000;
     --node: #509941;
     --error: #FF013C;
+    /* social media icon */
+    --linkedin: #1da1f2;
+    --instagram: #e6683c;
     /*----------------*/
     background: var(--bg-2);
 }

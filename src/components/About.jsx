@@ -43,10 +43,10 @@ const About = () => {
                 I am a highly motivated individual and eternal optimist dedicated to writing clear, concise, robust code
                 that
                 works. Striving to never stop learning and improving.
-                When I&apos;m not coding, I am writing blogs, reading, or picking up some new hands-on art project
-                like
-                photography.
-                I like to have my perspective and belief systems challenged so that I see the world through new eyes.
+                When I&apos;m not coding, I enjoy cycling 🚴‍♀, going camping ⛺, and occasionally embarking on new
+                outdoor
+                adventures. I find it refreshing to explore nature and disconnect from technology, allowing myself to
+                fully immerse in the present moment.
                 <span className="tag">{`<p>`}</span>
               </div>
             </div>

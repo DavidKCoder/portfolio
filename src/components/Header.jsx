@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Navbar, Nav, Drawer, IconButton } from 'rsuite';
 import Link from 'next/link';
-import SocialMedia from "./SocialMedia";
+import SocialMediaIcons from "./SocialMediaIcons";
 import useWindowWidth from "../hooks/useWindowWidth";
 import MenuIcon from '@rsuite/icons/Menu';
 import Gamepad from '@rsuite/icons/legacy/Gamepad';
@@ -47,11 +47,11 @@ const CustomNavbar = ({ windowWidth, onSelect, activeKey, open, setOpen, ...prop
             </Nav.Menu>
           </Nav>
           <Nav pullRight>
-            <SocialMedia/>
+            <SocialMediaIcons/>
           </Nav>
         </> :
         <Drawer size="60%" open={open} onClose={() => setOpen(false)}>
-          <Drawer.Body>
+          <Drawer.Body id="drawer-body">
             <Nav onSelect={onSelect} activeKey={activeKey}>
               <Link href="/#home" passHref>
                 <span className="rs-navbar-item">Home</span>
@@ -80,7 +80,7 @@ const CustomNavbar = ({ windowWidth, onSelect, activeKey, open, setOpen, ...prop
               </Nav.Menu>
             </Nav>
             <Nav pullRight>
-              <SocialMedia/>
+              <SocialMediaIcons/>
             </Nav>
           </Drawer.Body>
         </Drawer>
