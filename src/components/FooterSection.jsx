@@ -18,8 +18,12 @@ const FooterSection = () => {
           ))}
         </div>
       )}
-      <h4>© 2023 David K. | All rights reserved.</h4>
-      <h4>Privacy Policy</h4>
+      <h4>© 2024 David K. | All rights reserved.</h4>
+      <h4>
+        <Link href="/privacy-policy" passHref className="privacy-policy">
+          Privacy Policy
+        </Link>
+      </h4>
       {windowWidth > 450 && (
         <div className="social-media-icons">
           {social.map((s) => (
