@@ -75,7 +75,7 @@ const FormLayout = () => {
         <Form.Control name="from_email" type="email"/>
         <Form.HelpText tooltip>This field is required.</Form.HelpText>
       </Form.Group>
-      <Form.Group controlId="message" id="form-group">
+      <Form.Group controlId="textarea" id="form-group">
         <Form.ControlLabel>Your Message</Form.ControlLabel>
         <Form.Control name="message" rows={5} accepter={Textarea}/>
       </Form.Group>
