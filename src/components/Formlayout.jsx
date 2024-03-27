@@ -18,13 +18,19 @@ const initFormValue = {
   message: '',
 }
 
-const FormLayout = () => {
-  const Textarea = forwardRef((props, ref) => <Input {...props} as="textarea" ref={ref}/>);
-  Textarea.displayName = 'Textarea';
+const Textarea = forwardRef((props, ref) => <Input {...props} as="textarea" ref={ref}/>);
+Textarea.displayName = 'Textarea';
 
+const FormLayout = () => {
   const formRef = useRef();
   const [ formValue, setFormValue ] = useState(initFormValue);
   const [ status, setStatus ] = useState(null);
+
+  const setDefaultStatus = () => {
+    setTimeout(() => {
+      setStatus(null)
+    }, 5000)
+  }
 
   const sendEmail = async(currentStatus, event) => {
     event.preventDefault();
@@ -37,19 +43,18 @@ const FormLayout = () => {
     ).then(
       // response
       () => {
-        setStatus('success')
-
+        setStatus('success');
+        setDefaultStatus()
       },
       // error
       () => {
-        setStatus('error')
+        setStatus('error');
+        setDefaultStatus()
       },
     );
   };
 
-  const showMessage = useMemo(() => {
-    return status !== null ? <MessageInfo type={status}/> : null
-  }, [ status ])
+  const showMessage = status !== null ? <MessageInfo type={status}/> : null
 
   return (
     <Form
@@ -70,7 +75,7 @@ const FormLayout = () => {
         <Form.Control name="from_email" type="email"/>
         <Form.HelpText tooltip>This field is required.</Form.HelpText>
       </Form.Group>
-      <Form.Group controlId="textarea" id="form-group">
+      <Form.Group controlId="message" id="form-group">
         <Form.ControlLabel>Your Message</Form.ControlLabel>
         <Form.Control name="message" rows={5} accepter={Textarea}/>
       </Form.Group>
