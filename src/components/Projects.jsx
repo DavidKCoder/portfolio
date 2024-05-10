@@ -1,5 +1,5 @@
 import React from "react";
-import Swiper from "./Swiper";
+import SwiperBlock from "./Swiper";
 
 const Projects = () => {
   return (
@@ -9,7 +9,7 @@ const Projects = () => {
             I had the pleasure of working with these awesome projects.
         </span>
         <div style={{ padding: "20px 0"}}>
-            <Swiper/>
+            <SwiperBlock/>
         </div>
     </div>
   )

@@ -7,7 +7,7 @@ import {Image} from "next/dist/client/image-component";
 import 'swiper/css';
 import 'swiper/css/virtual';
 
-export default () => {
+const SwiperBlock = () => {
     const router = useRouter();
 
     const handleClickOnImage = (slug) => {
@@ -44,3 +44,5 @@ export default () => {
         </swiper-container>
     );
 };
+
+export default SwiperBlock;
