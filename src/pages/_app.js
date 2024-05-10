@@ -13,6 +13,8 @@ import { ThemeProvider } from 'next-themes';
 import Layout from "../components/Layout";
 import { ToasterContextProvider } from "../context/toaster-context";
 import { ScrollContextContextProvider } from "../context/scroll";
+import { register } from 'swiper/element/bundle';
+register();
 
 export default function App({ Component, pageProps }) {
   return (
